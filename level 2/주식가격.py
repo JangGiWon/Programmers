@@ -5,7 +5,7 @@ def solution(prices):
     for i, price in enumerate(prices):
         while stack and price < prices[stack[-1]]:
             temp = stack.pop()
-            answer[j] = i - temp
+            answer[temp] = i - temp
         stack.append(i)
 
     while stack:
